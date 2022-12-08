@@ -2,10 +2,10 @@
 {
     public static class Task1
     {
-        public static void Run()
+        public static void PartTwo()
         {
             //https://adventofcode.com/2022/day/1
-            string[] lines = File.ReadAllLines("Task1File.txt");
+            string[] lines = File.ReadAllLines("TextFile1.txt");
             int tempSum = 0;
             List<int> list = new List<int>();
             foreach (string line in lines)
