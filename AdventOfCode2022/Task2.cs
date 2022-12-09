@@ -3,13 +3,18 @@
     public static class Task2
     {
         //https://adventofcode.com/2022/day/2
-        //A and X - rock = 1 point
-        //B and Y - paper = 2 points
-        //C and Z - scissors = 3 points
+        //A - rock = 1 point
+        //B - paper = 2 points
+        //C - scissors = 3 points
         //you loss = 0 points
         //draw = 3 points
         //you win = 6 points
-        static Dictionary<string, int> results = new Dictionary<string, int>()
+        public static void PartOne()
+        {
+            //X - rock = 1 point
+            //Y - paper = 2 points
+            //Z - scissors = 3 points
+            Dictionary<string, int> results = new()
             {
                 {"AX", 4}, //Two rocks. Draw. 3 + 1 = 4
                 {"AY", 8}, //Rock loss with paper. You win. 6 + 2 = 8
@@ -21,8 +26,6 @@
                 {"CY", 2}, //Scissor win with paper. You loss. 0 + 2 = 2
                 {"CZ", 6}  //Two scissors. Draw. 3 + 3 = 6
             };
-        public static void PartOne()
-        {
             string[] lines = File.ReadAllLines("TextFile2.txt");
             int result = 0;
             foreach (string line in lines)
@@ -35,12 +38,16 @@
 
         public static void PartTwo()
         {
+            //X - you loss = 0 points
+            //Y - draw = 3 points
+            //Z - you win = 6 points
             string[] lines = File.ReadAllLines("TextFile2.txt");
             int result = 0;
             foreach (string line in lines)
             {
-                string round = line.Replace(" ", "");
-                result += results.FirstOrDefault(x => x.Key == round).Value;
+                string[] letters = line.Split(' ');
+
+                //result += results.FirstOrDefault(x => x.Key == round).Value;
             }
             Console.WriteLine($"Result: {result}"); //11449
         }
