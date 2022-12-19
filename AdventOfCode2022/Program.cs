@@ -5,6 +5,9 @@ using AdventOfCode2022;
 //Task1.PartTwo();
 //Console.WriteLine();
 
-Console.WriteLine("Task2");
+Console.WriteLine("Task2. Part One.");
 Task2.PartOne();
+Console.WriteLine();
+Console.WriteLine("Task2. Part Two.");
+Task2.PartTwo();
 Console.WriteLine();
