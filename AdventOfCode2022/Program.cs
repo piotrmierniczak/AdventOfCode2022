@@ -2,3 +2,5 @@
 using AdventOfCode2022;
 Console.WriteLine("Task 4 - part one");
 Task4.PartOne();
+Console.WriteLine("Task 4 - part two");
+Task4.PartTwo();
