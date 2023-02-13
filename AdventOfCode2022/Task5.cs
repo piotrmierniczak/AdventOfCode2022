@@ -13,7 +13,8 @@ namespace AdventOfCode2022
             int result = 0;
             foreach (string line in lines)
             {
-
+                List<int>? values = line.Replace("move ", "").Replace("from ", "").Replace("to ", "").Split(" ").Select(Int32.Parse)?.ToList();
+                
             }
             Console.WriteLine(result);
         }
